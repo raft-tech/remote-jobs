@@ -4,7 +4,9 @@
     "test": "mocha",
     "build": "bin/build-site.js",
     "serve": "http-server site/build/",
-    "start": "bin/serve-site.js"
+    "start": "bin/serve-site.js",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "nodemonConfig": {
     "ext": "js,md,html,css",
@@ -18,11 +20,13 @@
     "marked": "^0.7.0",
     "phin": "^3.4.0",
     "rimraf": "^3.0.0",
-    "swig-templates": "^2.0.3"
+    "swig-templates": "^2.0.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "http-server": "^0.11.1",
     "mocha": "^6.2.2"
-  }
+  },
+  "snyk": true
 }
